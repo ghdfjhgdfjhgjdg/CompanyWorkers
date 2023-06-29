@@ -49,7 +49,16 @@ while True:
                 del employees[del_item_name]
                 print('Користувача не знайдено!')
                 break
-    print(employees)
+
+    if get_info == 'list':
+        for key,value in employees.items():
+            print(key,value)
+    if get_info == 'change':
+        change_salary_name = input('кому ви хочете змінити зарплату')
+        change_salary = input("на скільки ви хочете змінити зарплату")
+        employees[change_salary_name]["salary"] = int(change_salary)
+        print(employees[change_salary_name])
+
 
 
 
